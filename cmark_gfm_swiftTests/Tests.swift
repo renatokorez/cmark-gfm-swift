@@ -11,6 +11,7 @@ extension TextElement {
         case .strikethrough(let children): return children.string
         case .strong(let children): return children.string
         case .text(let text): return text
+        case .emoji(let emoji): return emoji
         default: return ""
         }
     }
@@ -396,6 +397,20 @@ class Tests: XCTestCase {
         let markdown = "Mentioning @user bla bla"
         let html = Node(markdown: markdown)!.html
         XCTAssertEqual(html, "<p>Mentioning <a href=\"https://github.com/user\">@user</a> bla bla</p>\n")
+    }
+
+    func testRenderEmoji() {
+        let markdown = "this is :fire: woo"
+        let html = Node(markdown: markdown)!.html
+
+        XCTAssertEqual(html, "<p>this is 🔥 woo</p>\n")
+    }
+
+    func testRenderEmoji_withInvalidEmoji() {
+        let markdown = "this is :notvalidemoji:"
+        let html = Node(markdown: markdown)!.html
+
+        XCTAssertEqual(html, "<p>this is :notvalidemoji:</p>\n")
     }
 
     func testRenderHTML_withCheckbox() {
