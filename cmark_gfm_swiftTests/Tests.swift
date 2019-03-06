@@ -421,8 +421,8 @@ class Tests: XCTestCase {
         let html = Node(markdown: markdown)!.html
         let expected = """
             <ul>
-            <li><input type="checkbox" /> One</li>
-            <li><input type="checkbox" checked /> Two</li>
+            <li><input type="checkbox" disabled /> One</li>
+            <li><input type="checkbox" disabled checked /> Two</li>
             </ul>
 
             """
