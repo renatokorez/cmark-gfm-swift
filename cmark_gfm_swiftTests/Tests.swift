@@ -420,6 +420,22 @@ class Tests: XCTestCase {
         XCTAssertEqual(html, "<p>This is :notvalidemoji:</p>\n")
     }
 
+    func testRenderHTML_withList() {
+        let markdown = """
+                - One
+                - Two
+                """
+        let html = Node(markdown: markdown)!.html
+        let expected = """
+                <ul>
+                <li>One</li>
+                <li>Two</li>
+                </ul>
+
+                """
+        XCTAssertEqual(html, expected)
+    }
+
     func testRenderHTML_withCheckbox() {
         let markdown = """
             - [ ] One
@@ -428,8 +444,8 @@ class Tests: XCTestCase {
         let html = Node(markdown: markdown)!.html
         let expected = """
             <ul>
-            <li><input type="checkbox" disabled /> One</li>
-            <li><input type="checkbox" disabled checked /> Two</li>
+            <li class="task-list-item"><input type="checkbox" disabled /> One</li>
+            <li class="task-list-item"><input type="checkbox" disabled checked /> Two</li>
             </ul>
 
             """

@@ -175,7 +175,7 @@ extension Block {
 extension Node {
     var listItem: [Block]? {
         switch type {
-        case CMARK_NODE_ITEM:
+        case CMARK_NODE_ITEM, CMARK_NODE_CHECKBOX_ITEM:
             return children.compactMap(Block.init)
         default:
             return nil
