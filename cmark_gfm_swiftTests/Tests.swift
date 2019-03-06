@@ -400,17 +400,24 @@ class Tests: XCTestCase {
     }
 
     func testRenderEmoji() {
-        let markdown = "this is :fire: woo"
+        let markdown = "This is :fire: woo"
         let html = Node(markdown: markdown)!.html
 
-        XCTAssertEqual(html, "<p>this is 🔥 woo</p>\n")
+      XCTAssertEqual(html, "<p>This is 🔥 woo</p>\n")
+    }
+
+    func testRenderEmoji_withDifferentEmoji() {
+        let markdown = "Tropical :palm_tree:"
+        let html = Node(markdown: markdown)!.html
+
+        XCTAssertEqual(html, "<p>Tropical 🌴</p>\n")
     }
 
     func testRenderEmoji_withInvalidEmoji() {
-        let markdown = "this is :notvalidemoji:"
+        let markdown = "This is :notvalidemoji:"
         let html = Node(markdown: markdown)!.html
 
-        XCTAssertEqual(html, "<p>this is :notvalidemoji:</p>\n")
+        XCTAssertEqual(html, "<p>This is :notvalidemoji:</p>\n")
     }
 
     func testRenderHTML_withCheckbox() {

@@ -1,37 +1,12 @@
 #include "emoji.h"
 #include "parser.h"
 #include "render.h"
-
-#define EMOJI_INVALID_KEY -1
+#include "emoji_list.h"
 
 cmark_node_type CMARK_NODE_EMOJI;
 
-typedef struct {
-    char *key;
-    char *val;
-} s_emoji;
-
-static s_emoji lookuptable[] = {
-    { "fire:", "🔥" }
-};
-
-#define EMOJI_NKEYS (sizeof(lookuptable) / sizeof(s_emoji))
-
-// Search for emoji, not optimized but does the job
-static char* em(const char *key) {
-    for (int i = 0; i < EMOJI_NKEYS; i++) {
-        s_emoji *sym = &lookuptable[i];
-
-        if (strcmp(sym->key, key) == 0) {
-            return sym->val;
-        }
-    }
-
-    return NULL;
-}
-
 static char* get_emoji(const char* emoji_name) {
-    char* found_emoji = em(emoji_name);
+    char* found_emoji = emoji_for_key(emoji_name);
 
     if (found_emoji != NULL) {
         return found_emoji;
