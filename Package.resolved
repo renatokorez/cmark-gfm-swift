@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "cmark-gfm-spm",
+        "repositoryURL": "git@github.com:renatokorez/cmark-gfm-spm.git",
+        "state": {
+          "branch": null,
+          "revision": "2459251a57b778eb89e17041f8d24af253f0d261",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
