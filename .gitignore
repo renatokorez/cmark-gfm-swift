@@ -1,5 +1,10 @@
 # OS X
+
 .DS_Store
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
 
 # Xcode
 build/
