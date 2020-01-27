@@ -291,6 +291,7 @@
 		8801F7C9230E812000C161B0 /* cmark-gfm-swift-macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm-swift-macOS.h"; sourceTree = "<group>"; };
 		8801F7CB230E822800C161B0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8801F82F230E82FD00C161B0 /* cmark_gfm_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = cmark_gfm_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88BFD82823DEEAC100C45F00 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		A14D7F372230781400856121 /* emoji_list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emoji_list.h; sourceTree = "<group>"; };
 		A16320192235F6A3005FC8E0 /* wikilink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wikilink.h; sourceTree = "<group>"; };
 		A163201A2235F6A3005FC8E0 /* wikilink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wikilink.c; sourceTree = "<group>"; };
@@ -327,6 +328,7 @@
 		2911C5572070879600732441 = {
 			isa = PBXGroup;
 			children = (
+				88BFD82823DEEAC100C45F00 /* Package.swift */,
 				8801F7C8230E808400C161B0 /* cmark-gfm-swift-macOS */,
 				29C286D5207087CF002C19F7 /* Source */,
 				29C28E382070A6F4002C19F7 /* cmark_gfm_swiftTests */,
@@ -629,7 +631,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Ryan Nystrom";
 				TargetAttributes = {
 					2911C5602070879600732441 = {
@@ -940,7 +942,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -961,7 +962,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whoisryannystrom.cmark-gfm-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.renatokorez.cmark-gfm-swift";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = Source/cmark_gfm;
@@ -983,7 +984,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whoisryannystrom.cmark-gfm-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.renatokorez.cmark-gfm-swift";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = Source/cmark_gfm;
@@ -996,10 +997,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 523C4DWBTH;
+				DEVELOPMENT_TEAM = 4CXBEHPERM;
 				INFOPLIST_FILE = cmark_gfm_swiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whoisryannystrom.cmark-gfm-swiftTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.renatokorez.cmark-gfm-swiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1013,7 +1014,7 @@
 				DEVELOPMENT_TEAM = 523C4DWBTH;
 				INFOPLIST_FILE = cmark_gfm_swiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whoisryannystrom.cmark-gfm-swiftTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.renatokorez.cmark-gfm-swiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1033,7 +1034,7 @@
 				INFOPLIST_FILE = "cmark-gfm-swift-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whoisryannystrom.cmark-gfm-swift-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.renatokorez.cmark-gfm-swift-macOS";
 				PRODUCT_NAME = cmark_gfm_swift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1056,7 +1057,7 @@
 				INFOPLIST_FILE = "cmark-gfm-swift-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whoisryannystrom.cmark-gfm-swift-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.renatokorez.cmark-gfm-swift-macOS";
 				PRODUCT_NAME = cmark_gfm_swift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
